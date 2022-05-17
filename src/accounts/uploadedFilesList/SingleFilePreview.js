@@ -3,22 +3,31 @@ import React from 'react'
 import {AiFillEye,AiFillEyeInvisible,AiFillCloseCircle,AiOutlineCloudDownload} from "react-icons/ai";
 import { useState } from "react"
 import { useEffect } from 'react';
-import { getSimpleFileById,deleteSignleFiles } from './services/axios';
+import { getSimpleFileById,deleteSignleFiles } from "../../services/axios";
 import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom";
+import {UserFiles} from "./SimpleFilesToUpload"
 
 
 function SingleFilePreview ({id ,handleShow,isDeleted,setIsDeleted}) {
     const [showFile,setShowFile] = useState(false)
     const [fileInfo , setFileInfo] = useState({})
+    const navigate = useNavigate();
   
 
     
-    useEffect(async()=>{
-      const response  = await getSimpleFileById(id)
-      if (response.success===true){
-        setFileInfo(response.data)
+    useEffect(()=>{
 
+      async function fetchFileById () {
+        const response  = await getSimpleFileById(id)
+        if (response.success===true){
+          setFileInfo(response.data)
+  
+        }
       }
+
+      fetchFileById()
+     
     }
 
 ,[])
@@ -42,21 +51,25 @@ const handleDelete = ()=>{
     confirmButtonText: 'Delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-     deleteSignleFiles(id,"aaa").then((response) =>{
+     deleteSignleFiles(id,"").then((response) =>{
        if(response.success===true) {
-        
+
+       
+     
         const Toast = Swal.mixin({
           toast: true,
-          position: "bottom-left",
+          position: "bottom-right",
           showConfirmButton: false,
           timer: 1000,
           timerProgressBar: true,
         });
-
+      
+        
         Toast.fire({
           icon: "success",
           title: response.data,
         });
+    
         setIsDeleted(!isDeleted)
        }else {
         Swal.fire({

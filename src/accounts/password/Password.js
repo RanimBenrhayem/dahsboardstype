@@ -1,0 +1,161 @@
+import * as React from "react";
+import {  Avatar   } from "@material-ui/core";
+import InfoIcon from "@mui/icons-material/Info";
+import {
+  Grid,
+  Box,
+  Container,
+  Typography,
+  Toolbar,
+  AppBar,
+  IconButton,
+  TextField,
+  Paper,
+  Button,
+  Tooltip,
+} from "@mui/material";
+
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+
+import axios from "axios";
+import Swal from "sweetalert2";
+import LayoutHome from "../layout/LayoutHome";
+
+
+export default function Password() {
+    const [open, setOpen] = React.useState(false);
+    const [firstName, setFirstName] = React.useState("");
+    const [lastName, setLastName] = React.useState("");
+    const [phoneNumber, setPhoneNumber] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [passwordUser, setPasswordUser] = React.useState("");
+   
+  const [id,setId]= React.useState("")
+  const [emailContent , setEmailContent ] = React.useState('')
+  const[listUpdated,setLisUpdated] = React.useState(false)
+
+
+  
+  
+    return (
+        <div
+          style={{
+            backgroundColor: "#eceff1",
+            width: "100%",
+            height: 657,
+          }}
+        >
+          <LayoutHome />
+          <Container
+          
+            width="sd"
+            sx={{
+              marginTop: 15,
+              marginBottom: 5,
+              marginLeft: 15,
+            }}
+          >
+            <AppBar
+              position="fixed"
+              style={{ marginTop: 60, backgroundColor: "white" }}
+            >
+              <Toolbar>
+                <IconButton style={{ color: "gray", marginLeft: 60 }}>
+                  <Avatar  />
+                </IconButton>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  style={{ color: "gray", marginLeft: 60 }}
+                >
+                 Change password
+                </Typography>
+              </Toolbar>
+            </AppBar>
+            <Paper sx={{ padding: "2em 2em", boxShadow: 2 }}>
+              <Box
+                component="form"
+                sx={{ mt: 5 }}
+              
+               
+                
+              >
+                <Grid container spacing={3}>
+                  
+                
+              
+                 
+                  <Grid item xs={20}>
+                    <Typography>Old password :</Typography>
+                    <Tooltip title="The Password Should Be Composed Of At Least 5 characters">
+                      <InfoIcon style={{ marginTop: -40, marginLeft: 440 }} />
+                    </Tooltip>
+    
+                    <TextField
+                      required
+                      style={{ marginTop: -50, marginLeft: -345, width: 300 }}
+                      //fullWidth
+                      name="password"
+                      //label="Password"
+                      type="password"
+                      id="password"
+                      value={passwordUser}
+                      onChange={(e) => setPasswordUser(e.target.value)}
+                    />
+                  </Grid>
+    
+                 
+    
+    
+                  <Grid item xs={20}>
+                    <Typography> New Password :</Typography>
+                    <Tooltip title="The Password Should Be Composed Of At Least 5 characters">
+                      <InfoIcon style={{ marginTop: -40, marginLeft: 440 }} />
+                    </Tooltip>
+    
+                    <TextField
+                      required
+                      style={{ marginTop: -50, marginLeft: -345, width: 300 }}
+                      //fullWidth
+                      name="password"
+                      //label="Password"
+                      type="password"
+                      id="password"
+                      value={passwordUser}
+                      onChange={(e) => setPasswordUser(e.target.value)}
+                    />
+                  </Grid>
+    
+                  <Grid item sm={5}>
+                    <Button
+                      style={{ marginTop: -60, marginLeft: 600, width: 170 }}
+                      type="submit"
+                      variant="contained"
+                      //fullWidth
+                      sx={{ mt: 2, mb: 2 }}
+                      
+                    >
+                      Change
+                    </Button>
+                  </Grid>
+                  <Grid item sm={5}>
+                    <Button
+                      style={{ marginTop: -60, marginLeft: 350, width: 170 }}
+                      type="reset"
+                      variant="outlined"
+                      //fullWidth
+                      sx={{ mt: 2, mb: 2 }}
+                   
+                    >
+                      Cancel
+                    </Button>
+                  </Grid>
+                </Grid>
+              </Box>
+            </Paper>
+          </Container>
+          <div className="profil">You can change your password </div>
+        </div>
+      );
+    }
+
