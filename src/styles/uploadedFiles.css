@@ -2,7 +2,9 @@
  
   
   h2{
-    transform: translate(7%,10%);
+    transform: translate(32%,50%);
+    color: #408fcf;
+    font-size: 40px;
   }
   table{
     font-family: Arial, Helvetica, sans-serif;
@@ -179,7 +181,8 @@
     font-size: 15px;
     border-radius: 5px;
     margin:10px;
-    margin-left: 3cm;
+  
+   transform: translate(280%,150%);
   }
   
   .box select {
@@ -231,10 +234,110 @@
   border: none;
   font-size: 14px;
  height:40px;
- width: 80px;
+ width: 100px;
+ margin: 2px;
  text-align: center;
- transform: translate(5%);
+ transform: translate(600%,110%);
 }
+.buttondownloadasimage{
+  
+    color: rgb(255, 255, 255);
+    background-color: rgb(55, 73, 236);
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+   height:40px;
+   width: 100px;
+   margin: 2px;
+   text-align: center;
+   transform: translate(-398%,784%);
+  }
+  .buttonsave{
+    color: rgb(255, 255, 255);
+    background-color: rgb(55, 73, 236);
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+   height:40px;
+   width: 100px;
+   margin: 2px;
+   text-align: center;
+   transform: translate(110%,-32%);
+  }
+
+.addnewchart{transform: translate(-690%,-250%);
+  color: rgb(255, 255, 255);
+  background-color: rgb(55, 148, 236);
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+ height:47px;
+ width: 90px;
+ text-align: center;
+;}
+
+.selectechart{
+transform: translate(60%,2320%);
+font-size: 15px;
+color: #111dc7c4;
+}
+
+.select1{
+  background-color: #9d9d9eb6;
+  color: white;
+  padding: 5px;
+  width:200px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  margin:10px;
+  transform: translate(-200%,700%);
+
+}
+.select2{
+  background-color: #9d9d9eb6;
+  color: white;
+  padding: 5px;
+  width:200px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  margin:10px;
+  transform: translate(-200%,750%);
+
+}
+.select3{
+  background-color: #9d9d9eb6;
+  color: white;
+  padding: 5px;
+  width:200px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  margin:10px;
+  transform: translate(-200%,800%);
+
+}
+.select4{
+  background-color: #9d9d9eb6;
+  color: white;
+  padding: 5px;
+  width:200px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  margin:10px;
+  transform: translate(-200%,680%);
+
+}
+
+
+.input{
+  transform: translate(330%,150%);
+  height: 28px;
+}
+
+
   .buttonShow{
     color: rgb(255, 255, 255);
     background-color: rgb(55, 73, 236);
@@ -249,7 +352,7 @@
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
     margin: 5px;
-    transform: translate(90%);}
+    transform: translate(-500%,800%);}
   .download{color: rgb(255, 255, 255);
     background-color: rgb(55, 73, 236);
     border-radius: 5px;

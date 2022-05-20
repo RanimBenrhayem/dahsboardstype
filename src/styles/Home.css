@@ -25,6 +25,6 @@
     width: 6.5cm;
     transform: translate(185%,10%); 
 }
-.description{
-    transform: translateY(-80%);
+ .description  {
+    transform: translate(-30%,-100%);
 }
