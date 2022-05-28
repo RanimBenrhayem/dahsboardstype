@@ -252,6 +252,18 @@
    text-align: center;
    transform: translate(-398%,784%);
   }
+  .printButton{
+    color: rgb(255, 255, 255);
+    background-color: rgb(55, 73, 236);
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+   height:40px;
+   width: 100px;
+   margin: 2px;
+   text-align: center;
+   transform: translate(-410%,784%);
+  }
   .buttonsave{
     color: rgb(255, 255, 255);
     background-color: rgb(55, 73, 236);
@@ -327,8 +339,13 @@ color: #111dc7c4;
   font-size: 15px;
   border-radius: 5px;
   margin:10px;
-  transform: translate(-200%,680%);
+  transform: translate(-200%,500%);
 
+}
+.select5{
+  height: 50px;
+  width: 200px;
+  transform: translate(7%,70%);
 }
 
 
@@ -390,6 +407,12 @@ color: #111dc7c4;
     letter-spacing: 1px;
     color: rgb(139, 139, 139);
     font-size: 16px;
+  }
+  .descr{
+    transform: translate(8%,90%);
+    letter-spacing: 1px;
+    color: rgb(139, 139, 139);
+    font-size: 16px
   }
   .profil{
     transform: translate(10.8%,-90%);

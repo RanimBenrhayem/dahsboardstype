@@ -14,6 +14,7 @@ import  UserJoinedFiles from "./accounts/uploadedFilesList/UserJoinedFiles";
 import JoinProcess from "./accounts/uploadedFilesList/JoinProcess";
 import Profil from "./accounts/profil/Profil"
 import Password from "./accounts/password/Password"
+import DashbaordsList from "./accounts/dahsboard/DashboardsList"
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/JoinProcess" element={<JoinProcess/>}></Route>
           <Route exact path="/YourProfil" element={<Profil/>}></Route>
           <Route exact path="/Password" element={<Password/>}></Route>
+          <Route exact path="/DashboardsList" element={<DashbaordsList/>}></Route>
 
         </Routes>
 

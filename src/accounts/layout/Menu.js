@@ -17,6 +17,7 @@ import AddCommentIcon from "@mui/icons-material/AddComment";
 import { AiFillHome,AiOutlineCloudDownload ,AiFillFileText,AiOutlineLink,AiOutlineAreaChart,AiOutlineUnorderedList,AiOutlineFileAdd } from "react-icons/ai"
 import { BsFillFileEarmarkArrowDownFill,BsFiles } from "react-icons/bs";
 import {CgProfile} from "react-icons/cg"
+import {FcLineChart,FcPieChart,FcFlowChart} from "react-icons/fc"
 import DraftsIcon from "@mui/icons-material/Drafts";
 import { color } from "@mui/system";
 import PasswordIcon from '@mui/icons-material/Password';
@@ -26,6 +27,7 @@ export default function Menu2() {
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
+  const [open4, setOpen4] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -35,6 +37,9 @@ export default function Menu2() {
 
     const handleClick3 = () => {
       setOpen3(!open3);}
+
+      const handleClick4 = () => {
+        setOpen4(!open4);}
   return (
     <React.Fragment>
    
@@ -123,7 +128,7 @@ export default function Menu2() {
                 <AiFillFileText className = "icons" />
               </ListItemIcon>
               <Typography title="simple files lists"> Your simple files</Typography>
-              </ListItem>
+            </ListItem>
               <ListItem button   title="File list"sx={{ pl: 6 }} style={{ marginLeft: 13 }}  component={Link}
               to={"/JoinedFilesList"}>
                  
@@ -141,18 +146,60 @@ export default function Menu2() {
             </List>
         </Collapse>
 
-
-            <ListItem button  title="Dashboard" sx={{ pl: 6 }} style={{ marginLeft: 13 }}  component={Link}
+          
+      
+        <ListItem
+          button // component={Link} to={"/Dashboard"}
+          onClick={handleClick4}
+        >
+          <ListItemIcon>
+             <FcLineChart className="iconsList"  style={{color : '#1BAEF3'}}/> 
+          </ListItemIcon>
+          <Typography title="Dashboards"> Dashboards</Typography>
+          {open4 ? <ExpandLess /> : <ExpandMore />}
+        </ListItem>
+       
+              <Collapse in={open4} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+          <ListItem button   title="File list"sx={{ pl: 6 }} style={{ marginLeft: 13 }}  component={Link}
               to={"/Dashboard"}>
+                 
               <ListItemIcon>
-                <AiOutlineAreaChart className="icons"  style={{color : '#1BAEF3'}}/>
+                <FcPieChart className = "icons" />
               </ListItemIcon>
-              <Typography title="Dashboard"> Dashboard</Typography>
+              <Typography title="Create dashboards"> Create dashboards</Typography>
             </ListItem>
+              <ListItem button   title="File list"sx={{ pl: 6 }} style={{ marginLeft: 13 }}  component={Link}
+              to={"/DashboardsList"}>
+                 
+              <ListItemIcon>
+                <FcFlowChart className="icons" />
+              </ListItemIcon>
+              <Typography title="Dashboards Lists"> Dashboards Lists</Typography>
+              </ListItem>
+             
+
+
+
+
+              
+            </List>
+        </Collapse>
+
+          
+
+
+
+
+
 
 
           </List>
         </Collapse>
+
+
+    
+        
 
         <ListItem button component={Link} to={"/Warning"}>
           <ListItemIcon>
